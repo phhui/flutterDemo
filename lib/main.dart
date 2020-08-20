@@ -8,15 +8,11 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context){
     final wordPair = new WordPair.random();
     return new MaterialApp(
-      title:'Welcome to Flutter',
-      home: new Scaffold(
-        appBar:new AppBar(
-          title:new Text('Welcome to Flutter'),
+      title:'Startup Name Generator',
+      theme:new ThemeData(
+        primaryColor:Colors.blueGrey,
       ),
-        body:new Center(
-          child:new RandomWords(),
-        ),
-      ),
+      home: new RandomWords(),
     );
   }
 }
