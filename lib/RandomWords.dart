@@ -1,6 +1,7 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pqlib/PqBar.dart';
 
 class RandomWords extends StatefulWidget{
   @override
@@ -15,12 +16,7 @@ class RandomWordsState extends State<RandomWords>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
-      appBar:new AppBar(
-        title:new Text('Startup Name Generator'),
-        actions:<Widget>[
-          new IconButton(icon: new Icon(Icons.list), onPressed: _pushSaved),
-        ],
-      ),
+      appBar:new PqBar(cb:_pushSaved),
       body:_buildSuggestions(),
     );
   }
